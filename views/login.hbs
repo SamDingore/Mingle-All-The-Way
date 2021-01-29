@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<!-- saved from url=(0036)https://www.lumilabs.com/#sectiontop -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+  <!-- SITE TITLE -->
+
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Login</title>
+
+  <!-- PLUGINS CSS STYLE -->
+  <!-- Bootstrap -->
+  <link href="/style2/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+  <link href="/style2/font-awesome.min.css" rel="stylesheet">
+  <script src="https://use.fontawesome.com/3fa183d8a3.js"></script>
+
+  <!-- CUSTOM CSS -->
+  <link href="/style2/login.css" rel="stylesheet">
+
+  <!-- FAVICON -->
+  <link href="https://togetherwecan.now.sh/.now.sh/pages/favicon.png" rel="shortcut icon">
+</head>
+
+<body class="body-wrapper">
+
+
+<!--========================================
+=            Navigation Section            =
+=========================================-->
+
+<nav class="navbar main-nav border-less fixed-top navbar-expand-lg p-0">
+  <div class="container-fluid p-0">
+      <!-- logo -->
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="fa fa-bars"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav mx-auto">
+        <li class="nav-item ">
+          <a class="nav-link" href="https://togetherwecan.now.sh//index.html">Home
+			</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="https://togetherwecan.now.sh//posts.html">Posts</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="https://togetherwecan.now.sh//community.html">Community</a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" href="https://togetherwecan.now.sh//login.html">Login</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="https://togetherwecan.now.sh/signup.html">Signup</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="https://togetherwecan.now.sh/team.html">About</a>
+        </li>
+      </ul>
+      </div>
+  </div>
+</nav>
+
+<!--====  End of Navigation Section  ====-->
+
+
+
+<!--============================
+=            Banner            =
+=============================-->
+
+<section class="banner bg-banner-one" id="sectiontop">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-12">
+				<!-- Content Block -->
+
+        <form name="f1"  action="/api/login"  method="POST" >
+
+
+          <h1 style="font-size: 40px; text-align:center">Login</h1>
+
+          <input type="text" name="email" placeholder="Email" required>
+          <input type="password" name="password" placeholder="Password" required>
+            
+          <h6 style="color:white; text-align:center">Don't have an account <a href="signup.html">Sign up</a>
+
+          <input type="submit" name="" value="Login">
+
+
+
+        </form>
+{{#if message}}
+            <h4 class="alert alert-danger mt-4"> {{message}} </h4>
+
+          {{/if}}
+				<!-- Content Block -->
+
+			</div>
+		</div>
+	</div>
+</section>
+
+<!--====  End of Banner  ====-->
+
+<footer class="footer-main">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="block text-center">
+            <ul class="list-inline">
+              <li class="list-inline-item">
+                A work in progress by Sam Dingore 2020
+              </li>
+
+              <br>
+              <li class="list-inline-item">
+                <a href="mailto:sameerdingore.iam@gmail.com" target="_blank">Mail me!</a>
+              </li>
+              <li class="list-inline-item">
+                <a href="https://samdingore.now.sh" target="_blank">@ sam dingore</a>
+              </li>
+            </ul>
+          </div>
+
+        </div>
+      </div>
+    </div>
+</footer>
+
+
+<!--============================
+=            Footer            =
+=============================-->
+
+<footer class="subfooter">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6 align-self-center">
+      </div>
+      <div class="col-md-6">
+          <a href="https://togetherwecan.now.sh/login.html#sectiontop" class="to-top"><i class="fa fa-angle-up"></i></a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+  <!-- JAVASCRIPTS -->
+  <!-- jQuey -->
+
+  <script src="/style2/jquery.js"></script>
+
+  <!-- Bootstrap 4 -->
+  <script src="/style2/bootstrap.min.js"></script>
+
+	<script>
+$(document).ready(function(){
+  // Add smooth scrolling to all links
+  $("a").on('click', function(event) {
+
+    // Make sure this.hash has a value before overriding default behavior
+    if (this.hash !== "") {
+      // Prevent default anchor click behavior
+      event.preventDefault();
+
+      // Store hash
+      var hash = this.hash;
+
+      // Using jQuery's animate() method to add smooth page scroll
+      // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 800, function(){
+
+        // Add hash (#) to URL when done scrolling (default click behavior)
+        window.location.hash = hash;
+      });
+    } // End if
+  });
+});
+</script>
+
+
+
+
+
+
+</body></html>
